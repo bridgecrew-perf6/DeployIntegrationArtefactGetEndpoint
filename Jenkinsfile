@@ -3,7 +3,7 @@ pipeline {
 
   //Configure the following environment variables before executing the Jenkins Job
   environment {
-    IntegrationFlowID = "IntegrationFlow1"
+    IntegrationFlowID = "test1"
     GetEndpoint = true //If you don't need the endpoint or the artefact does not provide an endpoint, set the value to false
     DeploymentCheckRetryCounter = 20 //multiply by 3 to get the maximum deployment time
 	  CPIHost = "${env.CPI_HOST}"
@@ -43,7 +43,7 @@ pipeline {
             ],
             ignoreSslErrors: true,
             timeout: 30,
-            url: 'https://' + "${env.CPIHost}" + '/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + "${env.IntegrationFlowID}" + '\'&Version=\'active\'';
+            url: 'https://f46f9be9trial.it-cpitrial05.cfapps.us10-001.hana.ondemand.com/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + "${env.IntegrationFlowID}" + '\'&Version=\'active\'';
 
           //check deployment status
           println("Start checking integration flow deployment status.");
