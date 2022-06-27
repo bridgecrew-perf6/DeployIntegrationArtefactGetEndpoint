@@ -43,7 +43,7 @@ pipeline {
             ],
             ignoreSslErrors: true,
             timeout: 30,
-            url: 'https://f46f9be9trial.it-cpitrial05.cfapps.us10-001.hana.ondemand.com + '/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + "${env.IntegrationFlowID}" + '\'&Version=\'active\'';
+            url: 'https://' + 'f46f9be9trial.it-cpitrial05.cfapps.us10-001.hana.ondemand.com' + '/api/v1/DeployIntegrationDesigntimeArtifact?Id=\'' + "${env.IntegrationFlowID}" + '\'&Version=\'active\'';
           //check deployment status
           println("Start checking integration flow deployment status.");
           Integer counter = 0;
